@@ -1,0 +1,15 @@
+@() @main("Admin Page") {
+
+<script type="text/javascript" src="@routes.Assets.at("javascripts/main.js")"></script>
+<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+
+<ul id="users"></ul>
+
+<form action="@routes.Application.addUser()" method="post">
+	<input type="text" name="email" /> <input type="text" name="name" />
+	<input type="password" name="password" />
+	<button>Add User</button>
+</form>
+
+
+}
