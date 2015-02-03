@@ -1,10 +1,10 @@
 users:
-	- !!models.User
-    	email: sulya@gmail.com
-    	name: Sulya Kass
-    	password: password
-	
-	- !!models.User
-	    email: admin@gmail.com
-	    name: Admin
-	    password: password
+ - !!models.User
+  email: sulya@gmail.com
+  name: Sulya Kass
+  password: password
+
+ - !!models.User
+  email: admin@gmail.com
+  name: Admin
+  password: password
