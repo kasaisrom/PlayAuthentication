@@ -1,4 +1,5 @@
 users:
+
  - !!models.User
   email: sulya@gmail.com
   name: Sulya Kass

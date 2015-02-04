@@ -22,17 +22,6 @@ public class User extends Model{
 	@Constraints.Required
 	@Formats.NonEmpty
 	public String password;
-	
-	public User() {
-		super();
-	}
-
-	public User(String email, String name, String password) {
-		super();
-		this.email = email;
-		this.name = name;
-		this.password = password;
-	}
 
 	public static Model.Finder<String, User> finder = new Finder(String.class, User.class);
 	
