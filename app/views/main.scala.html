@@ -15,6 +15,13 @@
     	<script src="@routes.Assets.at("javascripts/jquery/jquery-2.1.0.js")"></script>      
       	<script src="@routes.Assets.at("javascripts/bootstrap.min.js")"></script>
     	<div class = "container">
+    		<div class="page-header"><h1>@title</h1></div>
+    		<ul class="nav nav-tabs">
+			    <li class="active"><a href="#">Home</a></li>
+			    <li><a href="#">Menu 1</a></li>
+			    <li><a href="#">Menu 2</a></li>
+			    <li><a href="#">Menu 3</a></li>
+			  </ul>
     		@content
     	</div>        
     </body>

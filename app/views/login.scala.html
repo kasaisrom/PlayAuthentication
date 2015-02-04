@@ -1,18 +1,28 @@
 @(loginForm: Form[Application.Login]) 
 
-@main("Login") { 
-
-	@helper.form(action = routes.Application.authenticate()){
-
+<div class="jumbotron">
 	@if(loginForm.hasGlobalErrors) {
-        <p class="error">
-            <span class="label label-danger">@loginForm.globalError.message</span>
-        </p>
-    }
-    
-	<h1>Login</h1>
-	<input type="email" name="email" placeholder="Email">
-	<input type="password" name="password" placeholder="Password">
-	<button type="submit">Login</button>
-
-} }
+		<p class="error">
+		   	<span class="label label-danger">@loginForm.globalError.message</span>
+		</p>
+	}
+	<form action = "@routes.Application.authenticate()" method ="post" class="form-horizontal">	    
+		<div class="form-group">
+		     <label for="email" class="control-label col-sm-2 sr-only">Email:</label>
+		     <div class="col-sm-10">
+		     	<input type="email" class="form-control" id="email" placeholder="Enter email">
+		     </div>
+		</div>
+		<div class="form-group">
+		     <label for="password" class="control-label col-sm-2 sr-only">Password:</label>
+		     <div class="col-sm-10">
+		     	<input type="password" class="form-control" id="password" placeholder="Enter password">
+		     </div>		     	
+		</div>
+		<div class="form-group">
+		     <div class="col-sm-offset-6 col-sm-6">
+		     	<button type="submit" class="btn btn-default">Login</button>
+		     </div>		     	
+		</div>					
+	</form>
+</div>	
